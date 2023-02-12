@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour {
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("epitech");
+        SceneManager.LoadScene("HUB_EPITECH");
     }
 
     public void Quit()
