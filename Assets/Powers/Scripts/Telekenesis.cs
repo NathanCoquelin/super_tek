@@ -11,18 +11,25 @@ public class Telekenesis : MonoBehaviour {
     [SerializeField] Transform holdArea;
     private GameObject heldObj;
     private Rigidbody heldObjRB;
-
+    private GameObject player;
     [Header("Physics Parameters")]
     [SerializeField] private float pickupRange = 5.0f;
     [SerializeField] private float pickupForce = 150.0f;
+
+    void Start()
+    {
+        player = GameObject.Find("MainCamera");
+    }
 
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (heldObj == null) {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3. forward), out hit, pickupRange)) {
+                float mana = player.GetComponent<PlayerStat>().get_current_mana();
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3. forward), out hit, pickupRange) && mana > 30) {
                     //&& hit.transform.gameObject.Active == true) {
                     PickupObject (hit.transform.gameObject);
+                    player.GetComponent<PlayerStat>().current_mana -= 30;
                 } 
             } else {
                 DropObject();
