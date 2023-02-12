@@ -30,11 +30,11 @@ public class Telekenesis : MonoBehaviour {
                     //&& hit.transform.gameObject.Active == true) {
                     PickupObject (hit.transform.gameObject);
                     player.GetComponent<PlayerStat>().current_mana -= 30;
-                } 
+                }
             } else {
                 DropObject();
             }
-        }   
+        }
         if (heldObj != null) {
             MoveObject();
         }
