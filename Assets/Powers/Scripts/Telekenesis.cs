@@ -69,4 +69,13 @@ public class Telekenesis : MonoBehaviour {
         heldObjRB.AddForce(playerCam.forward * throwForce);
         heldObj = null;
     }
+
+    public bool IsActive()
+    {
+        if (this.enabled) {
+            return (true);
+        } else {
+            return (false);
+        }
+    }
 }

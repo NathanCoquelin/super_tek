@@ -42,4 +42,13 @@ public class Laser : MonoBehaviour
         yield return new WaitForSeconds(laserDuration);
         laserLine.enabled = false;
     }
+
+    public bool IsActive()
+    {
+        if (this.enabled) {
+            return (true);
+        } else {
+            return (false);
+        }
+    }
 }
