@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 131b44b55268c802fba59b23b37d7389
   - enabled: 1
+    path: Assets/Scenes/HUB_EPITECH.unity
+    guid: 4069c740281fee97b97a42a9f1a72747
+  - enabled: 1
     path: Assets/Scenes/epitech.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
