@@ -1,2 +1,18 @@
 superhero theme
 interpromo teams
+
+pillules quand enemy autour peux pas les ramasser
+when taking one of the pills choose which aspect of the power to level up
+Telekinesis:
+    Does damage dipending on weight of boxes and enermy from impact
+    -   force of launch
+    -   number of boxes
+Laser:
+    -   Add damage
+    -   add knockback
+    -   add fire
+
+enemies:
+    -   object 3d capsule
+        -   remove mesh renderer
+        
