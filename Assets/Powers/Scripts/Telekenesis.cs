@@ -15,6 +15,7 @@ public class Telekenesis : MonoBehaviour {
     [Header("Physics Parameters")]
     [SerializeField] private float pickupRange = 5.0f;
     [SerializeField] private float pickupForce = 150.0f;
+    public bool canUse = false;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class Telekenesis : MonoBehaviour {
     }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && canUse == true) {
             if (heldObj == null) {
                 RaycastHit hit;
                 float mana = player.GetComponent<PlayerStat>().get_current_mana();

@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float life = 3;
+    public float life = 3.0f;
     void Awake()
     {
-        Destroy(gameObject, life);
+        Destroy(this.gameObject, life);
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }
