@@ -120,4 +120,8 @@ public class PlayerStat : MonoBehaviour {
         regen_mana += amount;
         return regen_mana;
     }
+    public int attack(int dmg) {
+        hp -= dmg;
+        return hp;
+    }
 }
